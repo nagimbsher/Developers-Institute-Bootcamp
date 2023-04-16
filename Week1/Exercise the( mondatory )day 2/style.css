@@ -1,0 +1,16 @@
+
+
+img {
+  border: 2px solid orange;
+  border-radius: 7px;
+  padding: 6px;
+  width: 270px;
+  background-color: orangered;
+  position: relative;
+  
+}
+
+img{
+    position: relative;
+    left:30%;
+}

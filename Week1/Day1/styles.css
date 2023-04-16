@@ -1,0 +1,10 @@
+body{
+    background-color:lightskyblue
+}
+
+
+div {
+    padding: 70px;
+    border: 1px solid #4CAF50;
+    background-color: #4CAF50;
+  }  

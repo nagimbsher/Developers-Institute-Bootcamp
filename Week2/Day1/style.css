@@ -1,0 +1,23 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.p1 , .p3 {
+    background-color: rgb(183, 255, 0);
+    height: 50px;
+    width: 50%;
+    text-align: center;
+    margin: 1px;
+    padding: 0px;; color: #469118;
+}
+
+.p2{
+    background-color: aqua;
+    height: 100px;
+    width: 40px
+    
+}
+

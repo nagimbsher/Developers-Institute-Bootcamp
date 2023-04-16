@@ -1,0 +1,62 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100&family=Phudu:wght@400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,700&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 2rem;
+  scroll-behavior:smooth ;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
+}
+:root{
+  --main-color:#fd4646;
+  ---tex-color:#171427;
+  ---bg-color:#fff,
+}
+imag{
+  width: 100%;
+}
+body{
+  color: var(---tex-color);
+}
+.container{
+  max-width: 1068px;
+  margin: auto;
+  width: 100%;
+}
+section{
+  padding: 4rem 0 3rem;
+
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(---bg-color);
+  box-shadow: 0 1px 4px hsl(0 4% 15% / 100%);
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.log{
+  font-size: 1.1rem;
+  color: var(---tex-color);
+  font-weight: 400;
+}
+#cacart-icon{
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.section-title{
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+
+
+}

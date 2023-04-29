@@ -78,7 +78,7 @@ if (users.length===0) console.log("no one is online")
 
 //If there is 1 user, console.log “<name_user> is online”.
 
-if(users.length===1)console.log(user[0]+"is online")
+if(users.length===1)console.log(users[0]+"is online")
 
 
 //If there are 2 users, console.l og “<name_user1> and <name_user2> are online”.
@@ -90,3 +90,10 @@ if(users.length===2)console.log(users[0]+"and"+users[1]+"are online")
 if (users. length > 2 ) console.log('${users[0]}, ${users[1]} and ${users.lenth-2 } moer are online')
 //For example, if there are 5 users, it should display:
 //name_user1, name_user2 and 3 more are online
+
+
+
+if (users.length ===0) {
+  console.log("no one is online")}
+  else if (users.length ===1) {
+  console.log(users[0]+ "is online") (edited) }

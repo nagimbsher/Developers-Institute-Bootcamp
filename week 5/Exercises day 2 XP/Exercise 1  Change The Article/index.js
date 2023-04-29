@@ -110,6 +110,3 @@ elem.addEventListener('click',function(e){
 
 
 
-
-
-

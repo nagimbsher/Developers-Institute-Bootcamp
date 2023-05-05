@@ -11,5 +11,5 @@ console.log(Math.expm1(2));
 // Expected output: 6.38905609893065
 
 function displayResult() {
-    document.getElementById("myHeader").innerHTML = "Have a nice day!";
+    document.getElementById("p").innerHTML = "";
   }

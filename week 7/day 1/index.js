@@ -11,8 +11,8 @@ function map(array){
     array.forEach((item,i) => {
         newArr.push(item *2)
     });
-    return
-} newArr
+    return  newArr
+}
 
 // * Create an function that get an array of Numbers as input
 // * and return a new array with all numbers multiply by 2

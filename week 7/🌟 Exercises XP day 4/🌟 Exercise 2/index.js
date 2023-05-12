@@ -9,7 +9,6 @@ function displayStudentInfo(objUser){
     return `your first name ${first} and your last name is ${last}`;
 }
 
-const sentence = displayStudentInfo({first: 'Elie', last:'Schoppik'});
+const sentence = displayStudentInfo({first: 'Adam', last:'David'});
 console.log("sentence:",sentence);
-
 

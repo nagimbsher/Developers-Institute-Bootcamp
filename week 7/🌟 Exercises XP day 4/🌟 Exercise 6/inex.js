@@ -24,3 +24,26 @@
 
 // Create a farmerCow object that is an instance of the class Mamal. The object accepts a name, a type and a color and calls the sound method that “moos” her information.
 // For example: Moooo I'm a cow, named Lily and I'm brown and white
+
+class Animal {
+    constructor(name, type,color){
+        this.name = name;
+        this.type = type;
+        this.color = color;
+    }
+}
+
+class Mammal extends Animal{
+    noise = "ohh uhh";
+    constructor(name,color){
+        super(name,"Mammal", color);
+    }
+    sound (noise){
+        return `this animal is a ${this.type}.It'sname is ${this.name}, it's color is ${this.color}
+        and the sound it makes is ${noise};`
+    }
+}
+
+
+const farmerCow = new Mammal("adam","white");
+console.log("farmerCow:",farmerCow);

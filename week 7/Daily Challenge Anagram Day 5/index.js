@@ -15,5 +15,5 @@
     return differences.every((num) => num === 0);
 }   
 
-const result1 = isAnagram("azdlowaazz","azdowbazzl");//trur
+const result1 = isAnagram("azdlowaazz","azdowbazzl"); //trur
 console.log("result1:",result1);

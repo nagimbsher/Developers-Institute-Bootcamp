@@ -6,6 +6,6 @@ class Person {
     this.name = name;
   }
 }
-
 const member = new Person('John');
-console.log(typeof member);
+console.log(typeof member);//typeof member is going to be a person
+                           //is also object

@@ -21,7 +21,7 @@ const marioGame = {
         }
     },
   }
-
+  
 //1- Convert this JS object into a JSON object. What happens to the nested objects ?
 const stringified = JSON.stringify(marioGame,null,2);
 console.log("stringified:",stringified);

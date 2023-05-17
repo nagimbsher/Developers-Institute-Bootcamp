@@ -79,7 +79,7 @@ const robots = [
       width="128"
       height="128"
       class="m-auto rounded-circle im-fluid"
-     src="https://picsum.photos/200/200"
+     src="https://picsum.photos/200/300"
      alt="">
      </div>
   <p class="h3>${robot.name}</p>

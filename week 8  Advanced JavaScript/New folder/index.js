@@ -10,20 +10,23 @@ deleteAllButton.addEventListener("click", deleteAll);
 function deleteAll(){
     container.innerHTML= "";
 }
+//..api 
+let api
+var apiKey = "6bc236fa8bd5e7e03f83fd8cea3eac74"
 
-function handleSubmit(e) {
-    e.preventDefault();
-    const searchTerm = input.value;
-    input.value = "";
-    getGifs(searchTerm);
+function requestApi(city){
+    //..addded {&units=metric} to the api to round up the number to the nearest 
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
+    fectchWeatherData()
 }
-function getGifs(word){
-    const url = `https://api.giphy.com/v1/gifs/search?q=${word}&rating=g&api_key=hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My&limit=1`;
-    const xhr = new XMLHttpRequest();
-    xhr.addEventListener("load",logRequest);
-    xhr.open("GET",url);
-    xhr.send();
-}    
+
+function fectchWeatherData(){
+    infoText.innerText="Getting weather info..."
+    infoText.classList.add("pending")
+    //...get server and return api response
+    fetch(api).then(response => response.json()).
+    then(result => weatherDetails(result)) 
+}
 
 
 function logRequest(e){

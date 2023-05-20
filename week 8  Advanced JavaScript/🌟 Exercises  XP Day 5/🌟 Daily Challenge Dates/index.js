@@ -26,18 +26,6 @@
 // formatDate(new Date(2020, 6, 4)) ➞ "20200704000000"
 
 
-string = "A quick brown fox" //string to be split
-array_of_strings = string.split("") //The split() function 
-
-console.log(string) //note that the split function doesn't change the original string
-console.log(array_of_strings)
-
-string = "A quick brown fox" //string to be split
-array_of_strings = string.split(" ") //The split() function 
-
-console.log(string) //note that the split function doesn't change the original string
-console.log(array_of_strings)
-
 
 
 

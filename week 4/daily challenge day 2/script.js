@@ -1,25 +1,48 @@
 // Instructions
 // Prompt the user for several words (separated by commas).
-const answer =prompt ("Type a few words separated by commas");
+const answer = prompt ("Type a few words separated by commas");
 // Put the words into an array.
-const words = answer.split(",")
-// Console.log the words one per line, in a rectangular frame as seen below.
-//function log(words){
-//console.log(word);
-//}
-//words. forEach(log)
+const words = answer.split(",");
+//Console.log the words one per line, in a rectangular frame as seen below.
 
+const lengthOflongestWord = getLengthOfLogestWord();
 
+displayRows(words,lengthOflongestWord );  
 
- let lengthOflogestword = 0;
-for( const word of words){
-    console.log(word);
-   const wordLength = word.length;//3
-    if (wordLength> lengthOflogestword){
- lengthOflogestword = wordLength;
+function displayRows (words,lengthOflongestWord ) {
+    const delimiterRow =createDelimiterRow();
+    console.log(delimiterRow);
+    for (const word of words){
+        displayWordWithStars(word,lengthOflongestWord );
     }
-    console.log("lengthOflongestWord", lengthOflogestword);
+    console.log(delimiterRow);
 }
+
+function displayWordWithStars(word,lengthOflongestWord){
+    const numberOfSpacesToAdd = lengthOflongestWord - word.lenght + 1;
+    const emptySpaces = " ".repeat(numberOfSpacesToAdd);
+    console.log("* "+ word + emptySpaces + "*");
+}
+
+function getLengthOfLogestWord(){
+    let lengthOflongestWord = 0;
+    for(const word of words){
+        const wordLength = word.length;
+        if (wordLength> lengthOflongestWord){
+            lengthOflongestWord = wordLength;
+        }
+    }
+    return lengthOflongestWord;
+}
+ 
+function createDelimiterRow(){
+const NUMBER_OF_STAES_ON_SIDE = 4;
+const numberOfStarsOnFirstRow = lengthOflongestWord + 
+NUMBER_OF_STAES_ON_SIDE
+return"*".repeat(numberOfStarsOnFirstRow);
+}
+
+
 // Check out the Hints and Requirements below.
 // For example, if the user gives you:
 // Hello, World, in, a, frame

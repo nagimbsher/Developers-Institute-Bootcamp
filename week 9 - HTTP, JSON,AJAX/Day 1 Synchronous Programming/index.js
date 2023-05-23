@@ -57,20 +57,120 @@ call the function and get results
 
 
 
+// let x;
+// fetch ('https://zivuch.github.io/yogaapi.json')
+//  .then(rest=> {
+//     return rest. json();
+//  })
+// .then(data => {
+//     x = data
+//     console.log(data);
+// })
+// .catch(e=> {
+//     console.log(e);
+// })
+// console.log(x);
+
+
+
+
 
 let x;
-fetch ('https://zivuch.github.io/yogaapi.json')
- .then(rest=> {
-    return rest. json();
- })
-.then(data => {
-    x = data
-    console.log(data);
+fetch('https://zivuch.github.io/yogaapi.json')
+.then(res => {
+    return res.json();
 })
-.catch(e=> {
-    console.log(e);
+.then(data =>{
+    getx(data) 
 })
-console.log(x);
+.catch(e=>{
+console.log(e);
+})
+console.log(x); 
+function getx (x){
+    console.log(x)
+}
+
+
+
+
+
+
+// JavaScript Instructor18:38
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then((res) => {
+//   return res.json();
+// })
+// .then((data)=>{
+//   render(data);
+//   // arr = data
+// })
+// .catch((err)=>{
+//   console.log(err);
+// })
+// const root = document.getElementById('root')
+// function render(arr) {
+//   console.log('render',arr);
+//   arr.forEach(item=>{
+//     const div = document.createElement('div');
+//     const p = document.createElement('p');
+//     p.innerText = item.email
+//     div.appendChild(p)
+//     root.appendChild(div)
+//   })
+
+// }
+// const root = document.getElementById('root')
+// function render(arr) {
+   // const html = arr.map(item => {
+   // return `<div style='display:inline-block;border:1px solid #000;'>
+    //  <img src='https://robohash.org/${item.id}?size=150x150' />
+      <h2>${item.name}</h2>
+      <p>${item.email}</p>
+    </div>`
+  })
+  root.innerHTML = html.join('')
+}
+
+
+
+
+
+JavaScript Instructor18:38
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((res) => {
+  return res.json();
+})
+.then((data)=>{
+  render(data);
+  // arr = data
+})
+.catch((err)=>{
+  console.log(err);
+})
+const root = document.getElementById('root')
+function render(arr) {
+  console.log('render',arr);
+  arr.forEach(item=>{
+    const div = document.createElement('div');
+    const p = document.createElement('p');
+    p.innerText = item.email
+    div.appendChild(p)
+    root.appendChild(div)
+  })
+}
+const root = document.getElementById('root')
+function render(arr) {
+    const html = arr.map(item => {
+    return `<div style='display:inline-block;border:1px solid #000;'>
+      <img src='https://robohash.org/${item.id}?size=150x150' />
+      <h2>${item.name}</h2>
+      <p>${item.email}</p>
+    </div>`
+  })
+  root.innerHTML = html.join('')
+}
+
 
 
 

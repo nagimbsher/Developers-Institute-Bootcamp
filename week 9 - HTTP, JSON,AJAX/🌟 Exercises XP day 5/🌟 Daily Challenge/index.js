@@ -1,59 +1,50 @@
-fetchCurrencies();
-handleClick();
-const fromSelect = document.getElementById("from");
-const toSelect = document.getElementById("to");
-const switchButton = document.getElementById("switch");
 
-document.getElementById("input").addEventListener("keyup",
-calculateTotal);
-fromSelect.addEventListener("change", calculateTotal);
-toSelect.addEventListener("change", calculateTotal);
-switchButton.addEventListener("click", switchCurrencies);
+const currencies = {
+    ILS: "Israel Shekel",
+    AUD: "Australian Dollar",
+    CAD: "Canadian Dollar",
+    EUR: "Euro",
+    GBP: "British Pound",
+    INR: "Indian Rupee",
+    JPN: "Japanese Yen",
+    USD: "United States Dollar",
+    ZAR: "South African Rand",
+  };
 
-function switchCurrencies(){
-    [fromSelect.value, toSelect.value] = [toSelect.value, fromSelect.value];
-    calculateTotal();
-}
+  const primaryCurrency = document.getElementById("primary");
+  const secondaryCurrency = document.getElementById("secondary");
+  primaryCurrency.innerHTML = getOptions(currencies);
+  secondaryCurrency.innerHTML = getOptions(currencies);
 
-function fetchCurrencies(){
-    const url = "https://v6.exchangerate-api.com/v6/6da4d3cdc657da50182b0fd5/codes";
-    fetch(url)
-    .then((res) => res.json())
-    .then((res) => console.log(res))
-    .catch((error) => console.error(error));
-}
+  function getOptions(data) {
+    return Object.entries(data)
+      .map(([country, currency]) => `<option value="${country}">${country} | ${currency}</option>`)
+      .join("");
+  }
 
-function populateDropdown(){
-    const entries = Object.entries(codes)
+  document.getElementById("btn-convert").addEventListener("click", fetchCurrencies);
+  function fetchCurrencies() {
+    const primary = primaryCurrency.value;
+    const secondary = secondaryCurrency.value;
+    const amount = document.getElementById("amount").value;
+    fetch(" https://v6.exchangerate-api.com/v6/6da4d3cdc657da50182b0fd5/latest/" + primary)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("NETWORK RESPONSE ERROR");
+        }
+      })
+      .then((data) => {
+        console.log(data);
+        displayCurrency(data, primary, secondary, amount);
+      })
+      .catch((error) => console.error("FETCH ERROR:", error));
+  }
 
-    for (const entry of entries){
-        const [index, [code,name]] = entry
-        const option = document.createElement("option");
-        const option2 = document.createElement("option");
-        option.innerText = code + ", " + name;
-        option2.innerText = code + ", "  + name;
-        option.value = code;
-        option2.value = code;
-        fromSelect.appendChild(option);
-        toSelect.appendChild(option2);
-    }
-}
-
-async function handleClick (){
-    const curr1 = fromSelect.value;
-    const curr2 = toSelect.value;
-    const input = document.getElementById("input");
-    const summary = document.getElementById("summary") 
-
-    const url = `https://v6.exchangerate-api.com/v6/6da4d3cdc657da50182b0fd5/pair${curr1}/${curr2}`;
-    try{
-        const res = await fetch(url)
-        const resJson = await res.json();
-        const rate = resJson.conversion_rate;
-        const amount = Number(input.value);
-        const total = amount * rate
-        summary.innerText = `${amount} ${curr1} = ${total} ${curr2}`;
-    }catch(error){
-        console.error(error);
-    }
-} 
+  function displayCurrency(data, primary, secondary, amount) {
+    const calculated = amount * data.conversion_rates[secondary];
+    document.getElementById("result").setAttribute("style", "display:block");
+    document.getElementById("txt-primary").innerText = amount + " " + primary + " = ";
+    document.getElementById("txt-secondary").innerText = calculated + " " + secondary;
+  }

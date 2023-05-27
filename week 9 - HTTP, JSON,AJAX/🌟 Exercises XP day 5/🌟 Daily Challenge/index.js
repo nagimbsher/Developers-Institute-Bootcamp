@@ -1,5 +1,5 @@
 fetchCurrencies();
-calculateTotal();
+handleClick();
 const fromSelect = document.getElementById("from");
 const toSelect = document.getElementById("to");
 const switchButton = document.getElementById("switch");
@@ -7,8 +7,8 @@ const switchButton = document.getElementById("switch");
 document.getElementById("input").addEventListener("keyup",
 calculateTotal);
 fromSelect.addEventListener("change", calculateTotal);
-toSelect.addEventListener("change",calculateTotal);
-switchButton.addEventListener("click",switchCurrencies);
+toSelect.addEventListener("change", calculateTotal);
+switchButton.addEventListener("click", switchCurrencies);
 
 function switchCurrencies(){
     [fromSelect.value, toSelect.value] = [toSelect.value, fromSelect.value];

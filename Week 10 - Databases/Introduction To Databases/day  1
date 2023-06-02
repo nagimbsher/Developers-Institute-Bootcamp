@@ -28,3 +28,62 @@ last_name varchar(50)not null,
 ('Amelia','	Dux','1996-04-07'),
 ('David','Grez','2003-06-14'),
 ('Omer','Simpson','1980-10-03')
+
+
+
+
+ select * from customer inner join address on customer.address_id=address.address_id where(district='Texas')
+
+select * from customer inner join address on customer.address_id=address.address_id
+ 
+
+select * from customer inner join address on customer.address_id=530
+
+ select film_id,title, description, release_year,rental_rate from film order by rental_rate asc
+
+ select film_id,title, description, release_year,rental_rate from film
+
+ select film_id,title, description, release_year from film
+
+ select film_id,title, description, reease_year from film
+
+ select film_id,title, desription, reease_year from film
+
+ select film-id,title, desription, reease_year from film
+ 
+ select * from film select * from customer order by first_name desc
+ 
+ 
+ select distinct create_date from customer select create_date from customer 
+ select concat_ws('-',first_name,last_name) as full_name from customer 
+ select concat_ws(' ',first_name,last_name) as full_name from customer 
+ select concat (first_name,last_name) as full_name from customer 
+ select first_name,last_name from customer
+ select * from address select * from customer
+ 
+
+ select film-id,title, desription, reease_year from film
+
+ select film-id from film
+ 
+ select * from film
+
+ select * from customer order by first_name desc
+
+select * from customer
+
+ select distinct create_date from customer
+
+ select create_date from customer
+
+ select concat_ws('-',first_name,last_name) as full_name from customer
+
+ select concat_ws(' ',first_name,last_name) as full_name from customer
+
+ select concat_ws('',first_name,last_name) as full_name from customer
+
+select concat (first_name,last_name) as full_name from customer
+
+select contact (first_name,last_name) as full_name from customer
+
+select first_name,last_name from customer

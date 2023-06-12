@@ -1,0 +1,22 @@
+const form = document.querySelector("form");
+const messageBox = document.getElementById("message-box");
+const[username, password] =["username", "passwprd"].map((id)=>
+document.getElementById(id));
+
+const url = "http://localhost:3000/login"; 
+
+form?.addEventListener("submit",handleSubmit);
+
+
+function handleSubmit(e){
+    e.preventDefault();
+    if(username.value ===""||password.value ==="")return;
+    const options = {
+        method: "POST",
+        Headers:{
+            "Conten-Type":"appliction/json"
+        },
+        body: JSON.stringify({password:password.value, username:
+        username.value})
+    };  
+}

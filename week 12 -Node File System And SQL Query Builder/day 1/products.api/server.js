@@ -9,3 +9,10 @@ dotenv.config()
 
 app. use (cors());
 app
+
+app('/express.static(_drname+')
+
+app.get('.main',req)
+
+app.kj
+

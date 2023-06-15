@@ -34,3 +34,13 @@ function writeFileCallback(err){
  //-1.  CALLBACKS 
 // 2. PROMISES with..then().catch() 14 15 
 //.3. PROMISES with async/await
+
+// const { promises } = require("fs"); 
+// writeFile();
+//  deleteFile(); 
+//  async function writeFile(){}
+//  try {
+//     await promises.appendFile("data.txt", "\nBye World"); 
+//     console.log("text appended");
+//     console.log("there was an error", err)
+//  }

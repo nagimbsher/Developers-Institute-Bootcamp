@@ -19,4 +19,8 @@ function handleSubmit(e){
         body: JSON.stringify({password:password.value, username:
         username.value})
     };  
+    fetch(url,options)
+    .then ((res) => res.json())
+    .then ((res) => (messageBox.textContent = res.message))
+    .catch(console.log.error);
 }

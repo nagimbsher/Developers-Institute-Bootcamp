@@ -9,3 +9,35 @@ handleSubmit));
 
 
 const url = "http:localhost:3000/register";
+
+function handleSubmit(e){
+    e.preventDefault();
+    const [first, last, email, username, password] = divs.map
+    ((div) => div.value);
+    const body =[first, last, email, username, password];
+    const options ={
+        headers:{
+        "conten-Typ":"application/j"
+    },
+    method:"POST",   
+    body:JSON.stringify(body)
+};
+fetch(url,options)
+ .then((res) => res.json())
+ .then((res) =>(messageBox.innerText = res.message))
+ .catch(console.error)
+ .finally(() => { form.error()
+   // divs .forEach((div) => (div.value = ""));
+
+ }
+
+ )};
+
+function handleChange(e){
+    submitButton.disabled = isAnyFieldEmpty();
+
+}
+
+function isAnyFieldEmpty (){
+    return divs.some((div) => div === "");
+}

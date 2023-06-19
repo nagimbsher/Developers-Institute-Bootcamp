@@ -1,5 +1,8 @@
-export function App(){
-  const myelement = <> Hello world</>;
+import React from "react";
+
+export default function App() {
+  const sum = 5 + 5;
+  const myelement = <h1>React is {sum} items better with JSX!</h1>;
   return myelement;
 }
 

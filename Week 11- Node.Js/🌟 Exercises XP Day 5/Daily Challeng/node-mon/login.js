@@ -22,5 +22,8 @@ function handleSubmit(e){
     fetch(url,options)
     .then ((res) => res.json())
     .then ((res) => (messageBox.textContent = res.message))
-    .catch(console.log.error);
+    .catch(console.log.error)
+    .finally(() => {
+    [username, password]. forEach((input) => (input.value = ""));
+    })
 }

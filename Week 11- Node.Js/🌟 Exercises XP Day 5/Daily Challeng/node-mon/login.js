@@ -1,6 +1,6 @@
 const form = document.querySelector("form");
 const messageBox = document.getElementById("message-box");
-const[username, password] =["username", "passwprd"].map((id)=>
+const[username, password] =["username", "password"].map((id)=>
 document.getElementById(id));
 
 const url = "http://localhost:3000/login"; 
@@ -8,9 +8,9 @@ const url = "http://localhost:3000/login";
 form?.addEventListener("submit",handleSubmit);
 
 
-function handleSubmit(e){
+function handleSubmit(e) {
     e.preventDefault();
-    if(username.value ===""||password.value ==="")return;
+    if(username.value === ""|| password.value === "") return;
     const options = {
         method: "POST",
         Headers:{
@@ -19,11 +19,11 @@ function handleSubmit(e){
         body: JSON.stringify({password:password.value, username:
         username.value})
     };  
-    fetch(url,options)
+    fetch(url, options)
     .then ((res) => res.json())
     .then ((res) => (messageBox.textContent = res.message))
-    .catch(console.log.error)
+    .catch(console.error)
     .finally(() => {
-    [username, password]. forEach((input) => (input.value = ""));
-    })
+    [username, password].forEach((input) => (input.value = ""));
+    });
 }

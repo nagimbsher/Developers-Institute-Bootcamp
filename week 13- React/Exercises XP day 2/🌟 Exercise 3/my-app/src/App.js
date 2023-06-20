@@ -1,4 +1,4 @@
-
+import { UserFavoriteColors } from "./Component/FavoriteColors.component";
 export default function App(){
 const user = {
   firstName: 'Bob',
@@ -15,11 +15,7 @@ return(
 
 }
 
-function UserFavoriteColors(props) {
-    const favorites = props.favorites;
-    console.log("favorites:", favorites);
-  return favorites.map((favorite,i) =><li key= {i}>{favorite}</li>);
-}
+
 
 // import logo from './logo.svg';
 // import './App.css';

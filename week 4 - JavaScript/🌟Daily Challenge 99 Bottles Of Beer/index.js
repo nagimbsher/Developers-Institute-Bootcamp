@@ -1,6 +1,6 @@
 //Prompt the user for a number to begin conuting down bottles
 let numberOfBeers = getUserInput();
-let numberOfBeersToTakeAway =1;
+let numberOfBeersToTakeAway = 1;
 
 function getUserInput(){
     const answer = prompt("How many beers?");
@@ -16,10 +16,11 @@ while(numberOfBeers > 0 ){
     numberOfBeers -= numberOfBeersToTakeAway;
     numberOfBeersToTakeAway++; 
 }
-function makeStanza(num,counter){
-    const bottlesOrBottles = getBottleOrBottles(sum);
+function makeStanza(num, counter){
+    const bottlesOrBottles = getBottleOrBottles(num);
     const bottlesToTakeAway = getSmallerNumber(counter, num);
-    const remainigBottles = getBiggerNumber(num - counter,0)
+    const remainigBottles = getBiggerNumber(num - counter, 0);
+
 const stanza = `${num} ${bottlesOrBottles} of beer on the wall
 ${num} ${bottlesOrBottles} of beer
 Take ${bottlesToTakeAway} down, pass it around
@@ -27,18 +28,13 @@ ${remainigBottles} ${getBottleOrBottles(remainigBottles)} of beer
 on the wall`;
 }
 function getBiggerNumber(a,b){
-    if (a>b){
-        return a;
-    }else{
-        return b;
-    }
+return a > b? a : b;
 }
  function getSmallerNumber(a, b){
-    if(a < b){
-        return a;
-    }else{
-        return b;
-    }
+return a < b ? a :b;
+ }
+ function isPlural(num){
+    return num > 1;
  }
 
  function getBottleOrBottles(num){

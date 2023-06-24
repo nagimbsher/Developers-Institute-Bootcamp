@@ -1,5 +1,5 @@
-
 import React from "react";
+import {Language} from "./components/Language.component";
 export class App extends React.Component {
    constructor(props){
     super(props);
@@ -15,30 +15,34 @@ export class App extends React.Component {
    incrementCount = (languageName) => {
      const languageToUpdate = this.state.languages.find((lang)=> lang.name
      === languageName);
-     const newCount = { 
-    name: languageToUpdate.name,
-    votes:languageToUpdate.votes++ 
-     };
+     const newCount = { name: languageToUpdate.name,votes: languageToUpdate.votes++};
        this.setState(newCount);
      };
    render(){
     return(
         <>
         <h1> Vote for your favorite languages!</h1>
-        {this.state.languages.map((lang) => (
-        <p>{lang.name} : {lang.votes}
-        </p>
+        <div className="languages">
+        {this.state.languages.map((lang, i) => (
+          <Language
+        name={lang.name}
+        votes={lang.votes}
+        key={i}
+        incrementCount={() => this.incrementCount(lang.name)}
+        />
         ))}
-        </>
+    </div>
+    </>
     );
    }
 }
 
 
-
-
-
-
-
-
 export default App;
+
+
+
+
+
+
+

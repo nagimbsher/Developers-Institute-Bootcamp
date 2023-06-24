@@ -26,6 +26,7 @@ ${num} ${bottlesOrBottles} of beer
 Take ${bottlesToTakeAway} down, pass it around
 ${remainigBottles} ${getBottleOrBottles(remainigBottles)} of beer
 on the wall`;
+return stanza;
 }
 function getBiggerNumber(a,b){
 return a > b? a : b;

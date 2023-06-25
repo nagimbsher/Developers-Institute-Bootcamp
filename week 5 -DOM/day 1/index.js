@@ -8,13 +8,7 @@
 // 4. Use the previousElementSibling / previousSibling  property to access an elemen
 // 4. Use the previousElementSibling / previousSibling  property to access an element.
 // 5. Use the parentNode property to access an element.
-// 6. Use the childNodes property to access a group of child elements.
-
-
-
-
-
-
+// 6. Use the childNodes property to access a group of child el
 
 
 

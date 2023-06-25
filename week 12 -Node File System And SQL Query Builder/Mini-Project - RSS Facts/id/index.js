@@ -1,8 +1,6 @@
 const Parser = require("rss-parser");
 const  parser = new Parser();
-
 const url ="https://thefactfile.org/feed/";
-
 const express = require("express");
 const { render } = require("ejs");
 const app = express();

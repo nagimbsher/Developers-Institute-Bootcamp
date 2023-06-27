@@ -1,21 +1,21 @@
-import React, { Component } from 'react'
-import 'tachyons'
+import User from './components/User.component'
+import './App.css';
 import users from './users.json'
-export default class User extends Component {
-    render (){
-    return (
-      <div className='User'>
-        {
+import 'tachyons'
+
+function App() {
+
+  return (
+    <div className="App">
+    {
       users.map( (item,indx) => {
-        return(
-        <User info={item} key={indx}/>
-      )
-    })
-      }
+        return (
+          <User info={item} key={indx}/>
+        )
+      })
+    }
     </div>
   );
 }
-  }
 
-
-
+export default App;

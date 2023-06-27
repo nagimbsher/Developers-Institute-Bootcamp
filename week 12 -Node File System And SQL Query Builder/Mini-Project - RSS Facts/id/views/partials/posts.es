@@ -1,5 +1,5 @@
 <div>
-    <% for (const item of items){%>
+    <% for(const item of items){%>
         <li><%= item.title %></li>
         <%}%>
         <p> 

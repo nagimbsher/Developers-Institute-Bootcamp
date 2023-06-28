@@ -13,10 +13,4 @@ console.log(" I eat " + favoriteFood +" at every "+ favoriteMeal)
 // console.log('I eat ${favoriteFood}at every ${favoriteMeal}')
 
 
-//  🌟 Exercise 2 : Series
-// Instructions
-// Part I
-// Using this array : 
-const myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
-
 

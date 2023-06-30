@@ -1,42 +1,14 @@
-import React from 'react';
-import UserData from './UserData';
+import React from 'react'
 
-class App extends React.Component {
-  constructor() {
-    super();
-  }
-
-  handleSubmit = event => {
-    event.preventDefault();
-    let inputs = event.target.getElementsByTagName('input')
-    for (const item of inputs) {
-      console.log(item.value)
+export class PostList extends React.Component {
+    constructor(props){
+        super(props)
+        console.log('props:', props)
     }
-  }
-
   render() {
     return (
-      <div className="box" >
-        <UserData handleSubmit={this.handleSubmit} />
-      </div>
+      <div>PostList.component</div>
     )
   }
 }
 
-export default App;
-
-
-
-
-
-// import React from "react"
-
-// export class PostList extends React.Component {
-//     constructor(props){
-//   super(props)
-//   console.log('props:',props)
-//     }
-//     render(){
-//         return<div>Posts</div>;
-//     }
-// }

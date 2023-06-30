@@ -1,25 +1,9 @@
-import React from 'react';
-import UserData from './UserData';
-class App extends React.Component {
-  constructor() {
-    super();
-  }
+import React, { Component } from 'react'
 
-  handleSubmit = event => {
-    event.preventDefault();
-    let inputs = event.target.getElementsByTagName('input')
-    for (const item of inputs) {
-      console.log(item.value)
-    }
-  }
-
+export default class App extends Component {
   render() {
     return (
-      <div className="box" >
-        <UserData handleSubmit={this.handleSubmit} />
-      </div>
+      <div>App</div>
     )
   }
 }
-
-export default App;

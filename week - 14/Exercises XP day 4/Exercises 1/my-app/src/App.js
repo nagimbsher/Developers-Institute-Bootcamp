@@ -29,12 +29,12 @@ function Navbar() {
   return( <> 
     <h1>Welcome to React Router!</h1>
     <p>
-  <NavLink to="/">home</NavLink>
+  <NavLink to="/">Home</NavLink>
   </p>
   <p>
   <NavLink to="/profile">Profile</NavLink>
   </p>
-    <p>
+  <p>
   <NavLink to ="/shop">Shop </NavLink>
   </p>
   </>

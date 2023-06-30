@@ -2,7 +2,7 @@ import React from 'react'
 export class Summary extends React.Component {
     constructor(props){
         super(props)
-        console.log('props:',props)
+        console.log('props')
     }
     render(){
        

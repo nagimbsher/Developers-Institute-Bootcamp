@@ -31,8 +31,10 @@ function Navbar() {
     <p>
   <NavLink to="/">home</NavLink>
   </p>
-  <NavLink to="/profile">Profile</NavLink>
   <p>
+  <NavLink to="/profile">Profile</NavLink>
+  </p>
+    <p>
   <NavLink to ="/shop">Shop </NavLink>
   </p>
   </>

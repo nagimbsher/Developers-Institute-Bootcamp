@@ -20,6 +20,7 @@ export class UserForm extends React.Component {
     const resJson = await fetch (url, options);
     const res = await resJson.json();
     this.props.setMessage(res.message);
+    messageInput.value = "";
   }catch(err){
     console.error(err);
   }

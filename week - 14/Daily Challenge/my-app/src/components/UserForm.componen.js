@@ -11,7 +11,7 @@ export class UserForm extends React.Component{
     fetch(url);
     };
     render(){
-        const destination = ["Japan","Thailand","Brazil","Israel","UK","Spain"];
+       const destination = ["Japan","Thailand","Brazil","Israel","UK","Spain"];
         return(
             <>
             <form id="onSubmit={this.handleSubmit}">
@@ -21,6 +21,13 @@ export class UserForm extends React.Component{
                 value={this.props.info.firstName}
                onChange={(e) => this.props.ChangeLastName(e.target.value)} 
                />
+                <label htmlFor="gender1">Mele</label>
+                <input
+                type="text"
+                name="lastname"
+                value={this.props.info.lastName}
+                onChange={(e) => this.props.ChangeLastName(e.target.value)} 
+                />
                 <input
                 type="text"
                 name="age"
@@ -36,13 +43,7 @@ export class UserForm extends React.Component{
                 checked={this.props.info.gender === "male"}
                 onChange={(e) => this.props.ChangeGender(e.target.value)}
                 />
-                <label htmlFor="gender1">Mele</label>
-                <input
-                type="text"
-                name="lastname"
-                value={this.props.info.lastName}
-                onChange={(e) => this.props.ChangeLastName(e.target.value)} 
-                />
+             
                 <label htmlFor="gender2">Famale</label>
                 <input
                 type="radio"
@@ -59,6 +60,10 @@ export class UserForm extends React.Component{
                 onChange={(e) => this.props.ChangeDestination(e.target.value)}
                 value={this.props.destination}
                 >
+                    {destination.map((dest) =>(
+                    <option value={dest}>{dest}</option>
+                    ))}
+                    
                     <option value="Thailand">Thailand</option>
                     <option value="Japan">Japan</option>
                     <option value="Brazil">Brazil</option>

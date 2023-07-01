@@ -1,5 +1,5 @@
 import React from "react";
-
+import { UserForm } from "./components/UserForm.component";
 export class App extends React.Component {
   constructor(props){
     super(props);
@@ -16,7 +16,12 @@ export class App extends React.Component {
     }
   }
   render(){
-    return<div>Message: {this.state.message}</div>;
+    return(
+    <>
+    <UserForm setMessage={(message) => this.setState({ message})}/>
+    <div>Message: {this.state.message}</div>
+    </>
+    );
   }
 }
 

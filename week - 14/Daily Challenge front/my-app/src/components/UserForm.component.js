@@ -7,7 +7,7 @@ export class UserForm extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     const messageInput = document.getElementById("search")
-    const message= messageInput.value
+    const message = messageInput.value
     const options = {
         method: "POST",
         Headers: {
@@ -17,16 +17,17 @@ export class UserForm extends React.Component {
     };
     const url = "http://localhost:3001/api/world";
     try{
-    const resJson = await fetch (url, options);
-    const res = await resJson.json();
+    const responsJson = await fetch (url, options);
+    const res = await responsJson.json();
     this.props.setMessage(res.message);
-    messageInput.value = "";
+    messageInput.value = " ";
   }catch(err){
     console.error(err);
-  }
+   }
   };
   render =()=>{
-  return(<form onSubmit={this.handleSubmit}>
+  return(
+  <form onSubmit={this.handleSubmit}>
     <input type="text" placeholder="Something her" id="search"/>
     <input type="submit" value= "Submit" />
   </form>

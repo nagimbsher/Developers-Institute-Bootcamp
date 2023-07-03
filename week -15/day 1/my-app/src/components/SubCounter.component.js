@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../App";
-
+import { CounterContext } from "Counter";
 const SubCounter = (props) => {
 const {count,setCount} = useContext(AppContext);
 return(

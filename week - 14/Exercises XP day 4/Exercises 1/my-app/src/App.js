@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
 import { ErrorBoundary } from './components/ErrorBoundary.component'
-import {BrowserRouter } from "react-router-dom";
-import{ Routes, Route, NavLink } from "react-router-dom";
+import{ Routes, Route, NavLink , BrowserRouter} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const routes = (
   <Routes> 
-    <Route path="/"element={<HomeScreen />}></Route>
-    <Route path="/shop"element={<ShopScreen />}></Route>
-    <Route path="/profile"element={<profileScreen />}></Route>
+    <Route path="/" element={<HomeScreen />}></Route>
+    <Route path="/shop" element={<ShopScreen />}></Route>
+    <Route path="/profile" element={<profileScreen />}></Route>
   </Routes>
 );
 
@@ -18,7 +17,7 @@ export default class App extends Component {
       <ErrorBoundary>
       <BrowserRouter >
       <Navbar/>
-      <ErrorBoundary>{routes}</ErrorBoundary>
+      {routes}
      </BrowserRouter >
      </ErrorBoundary>
     );
@@ -26,7 +25,8 @@ export default class App extends Component {
 }
 
 function Navbar() {
-  return( <> 
+  return(
+     <> 
     <h1>Welcome to React Router!</h1>
     <p>
   <NavLink to="/">Home</NavLink>
@@ -49,6 +49,6 @@ function HomeScreen (){
  }
 
  function profileScreen(){
-  throw new Error("oh no!");
+  
   return <h1> Profile</h1>;
  }

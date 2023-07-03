@@ -8,7 +8,7 @@ const app = express();
  app. get("/api/hello",(req,res) => res.send("Hello from Express"));
  app.post("/api/world", (req,res) =>{
  res.send ({
-   message:`I recevied your post request.this what you sent me:${JSON.stringify(req.body)}`
+   message:`I recevied your post request.this is what you sent me:${JSON.stringify(req.body)}`
 
  });
 });

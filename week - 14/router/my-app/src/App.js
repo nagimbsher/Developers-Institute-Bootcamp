@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Link } from "react-router-dom";
+import{ Routes, Route, NavLink , BrowserRouter} from "react-router-dom";
+//import { Route, Link } from "react-router-dom";
 
 const Home = () => (
   <div>
@@ -36,13 +37,13 @@ const App = () => (
   <div>
     <ul>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <Link to="/about">About Me</Link>
+        <NavLink to="/about">About Me</NavLink>
       </li>
       <li>
-        <Link to="/projects">My Projects</Link>
+        <NavLink to="/projects">My Projects</NavLink>
       </li>
     </ul>
     <Routes>

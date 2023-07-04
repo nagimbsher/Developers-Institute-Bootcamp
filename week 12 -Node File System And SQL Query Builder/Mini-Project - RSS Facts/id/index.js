@@ -7,6 +7,7 @@ const app = express();
 app.set("view engine","ejs");
 app.use(express.json());
 
+app.use("/public", express.static("public"));
 const PORT = 3000;
 app.get("/",renderFeed);
 app. get("/search",searchFeed);

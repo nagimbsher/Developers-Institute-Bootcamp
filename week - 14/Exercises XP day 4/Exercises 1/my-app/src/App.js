@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { ErrorBoundary } from './components/ErrorBoundary.component'
 import{ Routes, Route, NavLink , BrowserRouter} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -11,7 +11,7 @@ const routes = (
   </Routes>
 );
 
-export default class App extends Component {
+export default class App extends React.Component {
   render() {
     return (
       <ErrorBoundary>
@@ -52,3 +52,6 @@ function HomeScreen (){
   
   return <h1> Profile</h1>;
  }
+
+
+ 

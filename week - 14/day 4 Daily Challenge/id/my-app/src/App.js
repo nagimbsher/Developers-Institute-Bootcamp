@@ -18,9 +18,17 @@ export default class App extends Component {
           Get points by clicking on an image but do not click the same one twice
         </div>
         <div className='heroes-container'> 
-        {this.state.heroes.map((hero) =>{
-          return<div className='hero-card'>{hero.name}</div>
-        })}
+        {this.state.heroes.map((hero) =>(
+        <div className='hero-card'>
+            <img src={hero.image} />
+            <p>
+           <span className='bold'>Name:</span>{hero.name}
+            </p>
+            <p>
+           <span className='bold'>Occupation:</span>{hero.name}
+            </p>
+            </div>
+            ))}
         </div>
       </div>
     );

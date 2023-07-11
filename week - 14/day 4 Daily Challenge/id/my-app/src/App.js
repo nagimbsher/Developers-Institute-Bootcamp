@@ -6,6 +6,9 @@ export default class App extends Component {
     super(props)
     this.state = {heroes:heroes.superheroes};
   }
+  handleClick = () =>{
+    this.setState({heroes: this.state.heroes.sort((a,b) =>(Math.random() > 0.5?-1: 1)) });
+  };
   render() {
     return (
       <div className='container'>
@@ -18,9 +21,11 @@ export default class App extends Component {
           Get points by clicking on an image but do not click the same one twice
         </div>
         <div className="heroes-container"> 
-        {this.state.heroes.map((hero) =>(
-        <div className="hero-card">
+        {this.state.heroes.map((hero, i) =>(
+        <div key={i} className="hero-card" onClick={this.handleClick}>
+           <div className='image-container'>
             <img src = {hero.image} />
+           </div>
            <p>
             <span className="bold">Name:</span>{hero.name}
            </p>

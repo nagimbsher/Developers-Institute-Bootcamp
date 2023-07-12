@@ -1,10 +1,22 @@
 <div>
-    <% for(const item of items){%>
-        <li><%= item.title %></li>
-        <%}%>
-        <p> 
-          a link that redirects the user to the specific post in the 
-            website https://www.thefactsite.com/
-            the publication date, creator, category and content of the 
-        </p>
+  <% for(const item of items){%>
+      <li><%= item.title %></li>
+      <div>
+        <%for (const item of items){%>
+    <a href="<%=item.link %>"><%= item.title %></a>
+      <p><%= item.creator %></p>
+      <P><%= item.description %></P>
+      <P><%= item.pubDate%></P>
+      <p><%= item.contentSnippet %></p>
+      <p>
+        </p> 
+        
+      </li>
+    <% }%>
+    </div>
+      <%}%>
+      <p> 
+      </p>
 </div>
+
+

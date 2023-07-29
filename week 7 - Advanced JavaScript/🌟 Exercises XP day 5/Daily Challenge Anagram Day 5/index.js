@@ -1,19 +1,29 @@
-  function isAnagram(sentence1, sentence2) {
-    const str1 = sentence1.toLowerCase().split(" ").jon("");
-    const str2 = sentence2.toLowerCase().split(" ").jon("");
-    if (str1.length != str2.length) return false;
-
-    const total = {};
-    for (const letter of str1){
-        total[letter] = total[letter] + 1|| 1;
+function anagram(firstWord, secondWord) {
+    let first = firstWord.split(' ').join('').toLowerCase();
+    let second = secondWord.split(' ').join('').toLowerCase();
+  
+    if (first.length !== second.length) {
+      console.log('invalid');
+    } 
+  
+    let firstArr = [...first].sort();
+    let secondArr = [...second].sort();
+  
+    for (let i = 0; i < firstArr.length; i++){
+      if (firstArr[i] != secondArr[i]) {
+        return console.log('nope try other words, they are not compare')
+      } else {
+        return console.log('yes it is anagram');
+      }
     }
-    for (const letter of str2 ){
-        total[letter] = total[letter]? total[letter] -1: -1;
-    }
+  
+  
+    return;
+  }
+  
+  anagram("Astronomer", "Moon starer");
+  anagram("School master", "The classroom");
+  anagram("The Morse Code", "Here come dots");
+  anagram("The Morse", "Here come dots");
 
-    const differences = Object.values(total);
-    return differences.every((num) => num === 0);
-}   
 
-const result1 = isAnagram("azdlowaazz","azdowbazzl"); //trur
-console.log("result1:",result1);

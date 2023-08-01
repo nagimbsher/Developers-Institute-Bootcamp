@@ -6,7 +6,7 @@ let guessArr  = Array(wordLength).fill("*")
 console.log(guessArr)
 
 if (wordLength < 8) {
-  wordPlayer1 = prompt("Bro, your word is less then 8 letters, try again");
+  wordPlayer1 = prompt("Nagim , your word is less then 8 letters, try again");
 }
 
 console.log(`The word is ${guessArr.join('')}`)
@@ -15,7 +15,7 @@ while (guessArr.includes('*')) {
   let letterPlayer2 = prompt("Try to guess a word, type one letter");
 
   if (letterPlayer2.length > 1) {
-    letterPlayer2 = prompt("Bro, just one letter at once");
+    letterPlayer2 = prompt("Nagim, just one letter at once");
   }
 
   let correctGuess = false;

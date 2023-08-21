@@ -1,26 +1,15 @@
-import User from './components/User'
-import './App.css';
-import users from './users.json'
-import 'tachyons'
+import React from "react";
+import ReactDOM from "react-dom";
 
-function App() {
+import App from "./App";
+import "./index.css";
 
-  return (
-    <div className="App">
-    {
-      users.map( (item,indx) => {
-        return (
-          <User info={item} key={indx}/>
-        )
-      })
-    }
-    </div>
-  );
-}
-
-export default App;
-
-
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
 
 
@@ -29,13 +18,13 @@ export default App;
 // import React from 'react';
 // import ReactDOM from 'react-dom/client';
 // import './index.css';
-// import Hello from './User';
+// import App from './App';
 // import reportWebVitals from './reportWebVitals';
-// import 'tachyons';
+
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
 //   <React.StrictMode>
-//     <Hello/>
+//     <App />
 //   </React.StrictMode>
 // );
 

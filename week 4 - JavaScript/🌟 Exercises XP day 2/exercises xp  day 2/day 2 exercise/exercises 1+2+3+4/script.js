@@ -1,4 +1,4 @@
-// 🌟 Exercise 1 : Information
+//  Exercise 1 : Information
 // Instructions
 // Part I : function with no parameters
 
@@ -33,7 +33,7 @@ console.log("your favorite colr is",personFavoriteColor)
 
 
 
-// 🌟 Exercise 2 : Tips
+//  Exercise 2 : Tips
 // Instructions
 // John created a simple tip calculator to help calculate how much to tip when he and his family go to restaurants.
 
@@ -71,7 +71,7 @@ calculateTip()
 
 
 
-// 🌟 Exercise 3 : Find The Numbers Divisible By 23
+// Exercise 3 : Find The Numbers Divisible By 23
 // Instructions
 // Create a function call isDivisible() that takes no parameter.
 // In the function, loop through numbers 0 to 500.

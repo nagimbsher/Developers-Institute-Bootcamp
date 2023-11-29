@@ -60,8 +60,8 @@
 
 
 //async in loops
-const timeout = async (milliseconds,id)=>{
-    await new Promise((resolve =>){
-        setTimeout()
-    })
-}
+// const timeout = async (milliseconds,id)=>{
+//     await new Promise((resolve =>){
+//         setTimeout()
+//     })
+// }
